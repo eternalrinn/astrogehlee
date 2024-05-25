@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 12px;
+    background-color: #ffffff;
+}
+
+::-webkit-scrollbar-track{
+    background: #000000;
+}
+html{
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    background: url(Assets/star-bg.png);
+    overflow-x: hidden;
+}
+.gradient{
+    position: absolute;
+    background: linear-gradient(to bottom, #000000,transparent);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.bg{
+    position: absolute;
+    z-index: -2;
+}
+nav{
+    z-index: 100;
+    top: 0;
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px 0 20px;
+}
+.logo{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+nav img, footer img{
+    width: 45px;
+}
+nav h1{
+    font-size: 30px;
+}
+.navs, .navs ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navs a{
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.navs a::after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 0%;
+    left: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+.navs a:hover::after{
+    transition: all 0.3s ease;
+    width: 75%;
+}
+
+.navs button{
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    padding: 8px 14px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.navs button:hover, .pbut:hover{
+    transition: all 0.3s ease;
+    background-color: transparent;
+    outline: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+.navs button:active{
+    transform: scale(0.96);
+}
+
+.home h1{
+    line-height: 3rem;
+    font-size: 50px;
+}
+
+.home p{
+    font-size: 17px;
+    text-align: center;
+    margin: 0 300px 0 300px;
+}
+span{
+    color: #f3680c;
+}
+.home{
+    margin: 80px;
+}
+.maintxt{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.ctxt{
+    margin-top: -40px;
+    margin-left: -40px;
+    height: 70px;
+    line-height: 50px;
+    overflow: hidden;
+}
+.ctxt li{
+    line-height: 90px;
+    top: 0;
+    position: relative;
+    font-size: 50px;
+    font-weight: 700;
+    list-style: none;
+    animation: slide 8s steps(4) infinite;
+}
+
+.ctxt li span{
+    position: relative;
+}
+
+.ctxt li span:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    background-color: #000000;
+    border-left: 3px solid #f3680c;
+    animation: typing 2s steps(12) infinite;
+}
+
+@keyframes typing {
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+    
+}
+
+@keyframes slide {
+    100%{
+        top: -360px;
+    }
+}
+
+@keyframes revolve {
+    100% {
+        margin-left: 120%;
+    }
+}
+
+.planets {
+    display: flex;
+    align-items: center;
+    gap: 150px;
+    width: 200%;
+    margin-left: -320%;
+    margin-top: 200px;
+    animation: revolve 60s linear infinite;
+}
+
+.planets img {
+    transition: all 1s ease;
+    cursor: pointer;
+    width: 300px;
+}
+
+.planets img:hover {
+    transition: all 1s ease;
+    transform: scale(1.5);
+}
+
+.planets img:nth-child(9), .planets img:nth-child(1) {
+    width: 500px;
+}
+
+.planets img:nth-child(1){
+    margin-top: -400px;
+}
+.planets img:nth-child(2){
+    margin-top: -300px;
+}
+.planets img:nth-child(3){
+    margin-top: -200px;
+}
+.planets img:nth-child(4){
+    margin-top: -100px;
+}
+.planets img:nth-child(5){
+    margin-top: 0;
+}
+.planets img:nth-child(6){
+    margin-top: -100px;
+}
+.planets img:nth-child(7){
+    margin-top: -200px;
+}
+.planets img:nth-child(8){
+    margin-top: -300px;
+}
+.planets img:nth-child(9), .planets img:nth-child(10), .planets img:nth-child(11){
+    margin-top: -400px;
+}
+
+.planet-info img{
+    animation: moving 3s ease-in-out infinite;
+    width: 700px;
+    margin-bottom: 300px;
+}
+@keyframes moving {
+    0% {
+        transform: translateY(50px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(50px);
+    }
+}
+.planet-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.balls:nth-child(odd){
+    display: flex;
+    justify-content: flex-end;
+}
+
+.balls1 img{
+    margin-left: 200px;
+    width: 500px;
+}
+.content{
+    display: flex;
+    float: right;
+    flex-direction: column;
+    width: 50%;
+}
+.contentbut{
+    display: flex;
+    gap: 1rem;
+}
+.contentbut i{
+    font-size: 15px;
+    margin-right: 6px;
+}
+.gbut{
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+.pbut{
+    cursor: pointer;
+    width: fit-content;
+    padding: 8px 14px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
+}
+.content h1{
+    font-size: 60px;
+}
+
+.content p{
+    font-size: 20px;
+}
+
+.foot-contents h1{
+    font-size: 25px;
+}
+.foot-contents ul{
+    cursor: pointer;
+    margin-left: -40px;
+    font-weight:600;
+    color: rgb(167, 167, 167);
+}
+.flogo{
+    margin-top: -20px;
+    position: absolute;
+}
+.sec1{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.sec1 h1{
+    font-size: 35px;
+}
+.sec1 h3{
+    color: rgb(167, 167, 167);
+    margin-top: -25px;
+}
+
+footer{
+    padding: 20px;
+    width: 100%;
+    height: fit-content;
+    background-color: #000000;
+}
+.foot-contents{
+    display: grid;
+    text-align: center;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+}
+.sec ul{
+    list-style: none;
+}
+
+hr{
+    margin: 35px auto;
+    width: 90%;
+}
+.socials{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    text-align: center;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.icons i{
+    cursor: pointer;
+    border-radius: 100%;
+    padding: 5px;
+    border: 1px solid #ffffff;
+    font-size: 30px;
+}
+
+.icons i:hover{
+    animation: icon-up 0.3s linear both;
+}
+
+
+@keyframes icon-up {
+    100%{
+        transform: translateY(-5px);
+    }
+}
